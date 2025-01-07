@@ -13,6 +13,28 @@ html, body {
     background-color: lightsteelblue;
 }
 
+:root {
+    /* Default color scheme variables */
+    --bg-color: #efedea; /* Light mode background */
+    --navbar-bg-color: #efedea; /* Light mode navbar background */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #223a2c; /* Dark mode background */
+        --navbar-bg-color: #223a2c; /* Dark mode navbar background */
+    }
+}
+
+body {
+    background-color: var(--bg-color); /* Dynamically set background */
+    color: var(--text-color, #000); /* Optional: Set text color with a fallback */
+}
+
+.navbar {
+    background-color: var(--navbar-bg-color); /* Navbar background */
+}
+
 html, img {
     margin-left: auto;
     margin-right: auto;
@@ -27,26 +49,29 @@ html, img {
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
-    align-items: center;
+    align-content: space-evenly;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
 
     .centerbox > h2 {
-        flex: 1;
+      /*  flex: 1;*/
+        text-align: center;
     }
 
     .centerbox > i {
         flex: 1;
+        align-content: flex-start;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 .buttonbox {
     display: flex;
-    flex-direction: column;
-    margin-top: 1vh;
-    height: 25vh;
+    flex-direction: row;
+    margin-top: 5vh;
+    width: 20vw;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
@@ -57,8 +82,7 @@ html, img {
         flex: 1;
         background-color: indianred;
         border: hidden;
-        max-width: fit-content;
-        max-height: fit-content;
+        width: fit-content;
         align-self: center;
         text-align: center;
 }

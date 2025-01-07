@@ -13,18 +13,15 @@ html, body {
     background-color: lightsteelblue;
 }
 
-:root {
-    /* Default color scheme variables */
-    --bg-color: #efedea; /* Light mode background */
-    --navbar-bg-color: #efedea; /* Light mode navbar background */
+.two-column-list {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-color: #223a2c; /* Dark mode background */
-        --navbar-bg-color: #223a2c; /* Dark mode navbar background */
+    .two-column-list li {
+        width: 50%; /* Each item takes up half the width */
+        list-style: none;
     }
-}
 
 body {
     background-color: var(--bg-color); /* Dynamically set background */
@@ -56,7 +53,7 @@ html, img {
 }
 
     .centerbox > h2 {
-      /*  flex: 1;*/
+        /*  flex: 1;*/
         text-align: center;
     }
 
@@ -78,14 +75,14 @@ html, img {
     gap: 5rem;
 }
 
-.buttonbox .btn {
+    .buttonbox .btn {
         flex: 1;
         background-color: indianred;
         border: hidden;
         width: fit-content;
         align-self: center;
         text-align: center;
-}
+    }
 
 .navbar {
     display: block;

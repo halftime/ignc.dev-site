@@ -1,0 +1,107 @@
+
+.top-container {
+    display: flex;
+    height: 10vh;
+    -webkit-align-items: inherit;
+    align-items: inherit;
+}
+
+.top-container h2
+{
+    left: auto;
+    right: auto;
+}
+
+.bi-telephone,
+.bi-pin-map,
+.bi-envelope-at,
+.bi-globe,
+.bi-person,
+.bi-activity {
+    margin-inline: var(--custom-margin, 5%);
+}
+
+.bi-github ,
+.bi-linkedin,
+.bi-twitter
+{
+    color: black;
+}
+
+
+.icons {
+    display: float;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.socials-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vh;
+}
+
+.socials-container i, img {
+    flex: 1;
+    margin-inline: 1vw;
+}
+
+.formbox {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    width: 40%;
+    margin: 1vh;
+}
+
+.form-group {
+    flex: 1;
+   /* flex-direction: column;*/
+    align-items: center;
+    margin-bottom: 15px;
+    width: 25%;
+}
+
+.form-group label {
+    min-width: 100px;
+    flex: 0 0 120px;
+    margin-left: 1%;
+    text-align: left;
+    margin-right: 10px;
+}
+
+.form-group input {
+    flex: 1;
+    display: inline;
+    padding: 5px;
+    background: transparent;
+    text-align: left;
+    width: 500px;
+    border-style: unset;
+    pointer-events: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group input::placeholder {
+    color: gray;
+    /* Change to your desired color */
+    font-style: italic;
+    /* Optional styling */
+    opacity: 0.33;
+    /* Optional transparency */
+}
+
+
+#movingImage {
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    width: 32px;
+    height: 32px;
+    transition: transform 17ms linear;
+}

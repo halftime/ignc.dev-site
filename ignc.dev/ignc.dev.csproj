@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>fa4bc8d9-fdb1-4d0d-aa9d-c9bcbf4ff924</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Shared\Media\" />
+    <Folder Include="wwwroot\Media\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\about.css" />
+    <None Include="wwwroot\Scripts\script.js" />
+  </ItemGroup>
+
+</Project>

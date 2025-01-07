@@ -5,12 +5,26 @@ html {
     font-family: 'Arial', sans-serif;
 }
 
-html, body {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    height: 100vh; /* Make sure the body spans the full viewport height */
-    overflow: hidden; /* Prevent scrolling */
-    background-color: lightsteelblue;
+    html > body {
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        width: 100%;
+        overflow-x: hidden; /* Prevent scrolling */
+        background-color: lightsteelblue;
+    }
+
+html > body > iframe {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+html > body > img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    list-style: none;
 }
 
 .two-column-list {
@@ -20,22 +34,22 @@ html, body {
 
     .two-column-list li {
         width: 50%; /* Each item takes up half the width */
-        list-style: none;
+      /*  list-style: none;*/
     }
 
-body {
-    background-color: var(--bg-color); /* Dynamically set background */
-    color: var(--text-color, #000); /* Optional: Set text color with a fallback */
+.split {
+    display: flex;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
 }
+
 
 .navbar {
     background-color: var(--navbar-bg-color); /* Navbar background */
 }
 
-html, img {
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .container {
     display: block;
@@ -97,4 +111,176 @@ html, img {
     line-height: 60px;
     padding-left: 2em;
     background-color: whitesmoke;
+}
+
+
+.pagecontainer {
+    display: flex;
+    max-height: 100vh;
+    padding-top: 1vh;
+    flex-direction: column;
+}
+
+
+
+.timeline-table > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1) {
+    min-width: 25%;
+}
+
+.timeline-table {
+    width: 50%;
+    table-layout: auto;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .timeline-table tr {
+        margin-top: 0px;
+        border-bottom: dotted;
+        border-color: azure;
+        border-width: 1px;
+    }
+
+    .timeline-table th {
+        padding: 5px;
+        border-block: 3px solid;
+        border-color: azure;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .timeline-table td {
+        padding: 5px;
+        text-align: center;
+        position: relative;
+    }
+
+.timeline-span {
+    padding: 5px;
+    margin: 1px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.timeline-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.timeline-description {
+    font-size: 0.85em;
+    color: #666;
+}
+
+
+
+.top-container {
+    display: flex;
+    height: 10vh;
+    -webkit-align-items: inherit;
+    align-items: inherit;
+}
+
+    .top-container h2 {
+        left: auto;
+        right: auto;
+    }
+
+.bi-telephone,
+.bi-pin-map,
+.bi-envelope-at,
+.bi-globe,
+.bi-person,
+.bi-activity {
+    margin-inline: var(--custom-margin, 5%);
+}
+
+.bi-github,
+.bi-linkedin,
+.bi-twitter {
+    color: black;
+}
+
+
+.icons {
+    display: float;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.socials-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10vw;
+    /*    max-width: 5vw;*/
+    width: 100%;
+}
+
+    .socials-container i, img {
+        flex: 1;
+        /*  display: flex;*/
+        /*    justify-content: space-evenly;*/
+        /*    align-items: center;*/
+        /* margin-inline: 5vw; */
+    }
+
+.formbox {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    width: 40%;
+    margin: 1vh;
+}
+
+.form-group {
+    flex: 1;
+    /* flex-direction: column;*/
+    align-items: center;
+    margin-bottom: 15px;
+    width: 25%;
+}
+
+    .form-group label {
+        min-width: 100px;
+        flex: 0 0 120px;
+        margin-left: 1%;
+        text-align: left;
+        margin-right: 10px;
+    }
+
+    .form-group input {
+        flex: 1;
+        display: inline;
+        padding: 5px;
+        background: transparent;
+        text-align: left;
+        width: 500px;
+        border-style: unset;
+        pointer-events: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .form-group input::placeholder {
+            color: gray;
+            font-style: italic;
+           /* opacity: 0.5;*/
+        }
+
+
+#movingImage {
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    width: 32px;
+    height: 32px;
+    transition: transform 17ms linear;
 }

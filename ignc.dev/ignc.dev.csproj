@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\css\about.css" />
     <None Include="wwwroot\Scripts\script.js" />
   </ItemGroup>
 

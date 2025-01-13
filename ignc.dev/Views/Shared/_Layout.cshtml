@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ignc.dev</title>
 
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="false" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css?time=@DateTime.Now.Ticks" asp-append-version="false" />
     <link rel="stylesheet" href="~/css/site.css?time=@DateTime.Now.Ticks" asp-append-version="false" />
-    <link rel="stylesheet" href="~/ignc.dev.styles.css" asp-append-version="false" />
+    <link rel="stylesheet" href="~/ignc.dev.styles.css?time=@DateTime.Now.Ticks" asp-append-version="false" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
-    
-@*         <link rel="stylesheet" href="~/css/about.css" />
+
+    @*         <link rel="stylesheet" href="~/css/about.css" />
     <link rel="stylesheet" href="~/css/resume.css" />  *@
-    
+
 
 </head>
 
@@ -47,7 +47,7 @@
         @RenderBody()
 
         <footer class="border-top footer text-muted">
-            &copy; 2025 - ignc.dev - <a asp-area="" asp-controller="Home" asp-action="About">About</a>
+            @* ignc.dev <a asp-area="" asp-controller="Home" asp-action="About">About</a> *@
             <div class="socials-container">
                 <a href="https://linkedin.com/in/swag"><i class="bi-linkedin" alt="linkedin"></i></a>
                 <a href="mailto:ignc.dev@proton.me"><i class="bi-envelope" alt="email"></i></a>

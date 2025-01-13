@@ -1,6 +1,6 @@
 html {
     /*    position: relative;*/
-    min-height: 75%;
+    height: 100vh;
     font-size: 14px;
     font-family: 'Arial', sans-serif;
 }
@@ -8,8 +8,7 @@ html {
     html > body {
         margin: 0; /* Remove default margin */
         padding: 0; /* Remove default padding */
-        width: 100%;
-        overflow-x: hidden; /* Prevent scrolling */
+        height: 90%;
         background-color: lightsteelblue;
     }
 
@@ -34,16 +33,29 @@ li {
 
     .two-column-list li {
         width: 50%; /* Each item takes up half the width */
-      /*  list-style: none;*/
+        /*  list-style: none;*/
     }
 
 .split {
+    flex: auto;
     display: flex;
-    width: 75%;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
+    /*    border: none;*/
     flex-direction: row;
 }
+
+.left, .right {
+    flex: 1;
+    display: flex;
+    width: 50%;
+    border: hidden;
+}
+
+.left { align-content: flex-start;}
+
+.right { align-content: flex-end; }
 
 
 .navbar {
@@ -53,7 +65,7 @@ li {
 
 .container {
     display: block;
-    width: 100vw;
+    width: 100%;
 }
 
 .centerbox {
@@ -104,20 +116,20 @@ li {
 }
 
 .footer {
-    display: block;
-    bottom: 0px;
+    display: flex;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    height: 60px;
-    line-height: 60px;
+    height: 0px;
+/*    line-height: 60px;*/
     padding-left: 2em;
-    background-color: whitesmoke;
+/*    background-color: whitesmoke;*/
 }
 
 
 .pagecontainer {
     display: flex;
-    max-height: 100vh;
-    padding-top: 1vh;
+    height: 90vh;
     flex-direction: column;
 }
 
@@ -216,19 +228,23 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 10vw;
-    /*    max-width: 5vw;*/
+/*    justify-self: center;*/
+    /*margin: 0 auto;*/
+    margin-top: auto;
+    margin-bottom: auto;
+
+
+/*    position: absolute;
+    bottom: 1vh;*/
+    height: fit-content;
+    gap: 5vw;
     width: 100%;
 }
 
     .socials-container i, img {
-        flex: 1;
-        /*  display: flex;*/
-        /*    justify-content: space-evenly;*/
-        /*    align-items: center;*/
-        /* margin-inline: 5vw; */
+        font-size: 2rem;
+        max-width: 100%;
+        max-height: 100%;
     }
 
 .formbox {
@@ -236,8 +252,10 @@ li {
     margin-left: auto;
     margin-right: auto;
     flex-direction: column;
+    padding-top: 1vh;
     width: 40%;
-    margin: 1vh;
+    margin-left: 2px;
+    /*margin: 1vh;*/
 }
 
 .form-group {
@@ -272,15 +290,45 @@ li {
         .form-group input::placeholder {
             color: gray;
             font-style: italic;
-           /* opacity: 0.5;*/
+            /* opacity: 0.5;*/
         }
 
 
-#movingImage {
-    position: absolute;
-    top: 1vh;
-    left: 1vw;
-    width: 32px;
-    height: 32px;
-    transition: transform 17ms linear;
+.skill-container {
+    width: 100%;
+  /*  max-width: 500px;*/
+    padding-top: 1vh;
+    margin: 0px auto;
+}
+
+    .skill-container b {
+        font-size: 1.25rem;
+    }
+    .skill-container li {
+        margin-top: 1vh;
+        /*font-weight: bold;*/
+    }
+
+.skill-label {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5vh;
+    margin-bottom: 0.3vh;
+  /*  font-size: 16px;*/
+    color: #333;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: dimgray;
+    max-width: 500px;
+    overflow: hidden;
+    height: 1vh;
+}
+
+.progress {
+    height: 100%;
+    background-color: darkred;
+    width: 0;
+    /*    transition: width 0.5s ease;*/
 }

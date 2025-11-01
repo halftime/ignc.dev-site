@@ -6,20 +6,23 @@ services:
       context: .
       dockerfile: ignc.dev/Dockerfile
       platforms:
-        - linux/amd64
         - linux/arm64
     image: ignc-dev-site:latest
     container_name: ignc-dev-site
     ports:
-      - "8080:8080"
-      - "8081:8081"
+      - "80:8080"    # HTTP port
+      - "443:8081"   # HTTPS port
+    volumes:
+      - ./certs:/app/certs:ro  # Mount certificate directory as read-only
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:8080;https://+:8081
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/app/certs/cloudflare-origin.pem
+      - ASPNETCORE_Kestrel__Certificates__Default__KeyPath=/app/certs/cloudflare-origin.key
     restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/health", "||", "exit", "1"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
+    # healthcheck:
+    #   test: ["CMD", "curl", "-f", "http://localhost:8081/health", "||", "exit", "1"]
+    #   interval: 30s
+    #   timeout: 10s
+    #   retries: 3
+    #   start_period: 40s

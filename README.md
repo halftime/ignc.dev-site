@@ -1,8 +1,8 @@
 # ignc.dev
 
 # network setup
-* http:80   << CF rev proxy >> (|local rpi tcp:8080|)  
-* https:443 << CF rev proxy >> (|local rpi tcp:8081|)  
+* http:80       << CF rev proxy >>  (|local rpi tcp:8080|)  
+* https:443     << CF rev proxy >>  (|local rpi tcp:8081|)  
 
 # run
 '''

@@ -13,15 +13,22 @@ namespace ignc.dev
 
             var app = builder.Build();
 
+            // Configure Kestrel for development to avoid certificate issues
+            if (builder.Environment.IsDevelopment())
+            {
+                Console.WriteLine("Development environment detected.");
+                app.UseDeveloperExceptionPage();
+            }
+
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
+                app.UseHttpsRedirection();
             }
-
-            app.UseHttpsRedirection();
+            
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -33,6 +40,7 @@ namespace ignc.dev
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
+            
         }
     }
 }

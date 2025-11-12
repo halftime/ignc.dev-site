@@ -4,23 +4,98 @@ html {
 }
 
 body {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
     min-width: 100vw;
     min-height: 100vh;
-    overflow-x: hidden; /* remove horizontal scroll on mobile */
+    overflow-x: hidden;
+    /* remove horizontal scroll on mobile */
     background-color: lightsteelblue;
 }
 
-    body > iframe {
-        margin-top: 1%;
-        margin-bottom: 1%;
+.socials-container .polymarket-logo {
+    width: 84px;
+    height: 28px;
+    margin-top: 5px;
+    filter: brightness(0) invert(0);
+    position: relative;
+}
+
+.socials-container .polymarket-logo:hover {
+    filter: brightness(0.8);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Tooltip for Polymarket logo */
+.socials-container a[href*="polymarket"] {
+    position: relative;
+}
+
+.socials-container a[href*="polymarket"]:hover::after {
+    content: "might need a vpn";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    z-index: 1000;
+    opacity: 1;
+    animation: fadeIn 0.3s ease;
+    margin-bottom: 5px;
+}
+
+.socials-container a[href*="polymarket"]:hover::before {
+    content: "";
+    position: absolute;
+    bottom: calc(100% - 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    z-index: 1000;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(5px);
     }
 
-    body > img {
-        margin-left: auto;
-        margin-right: auto;
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
     }
+}
+
+body {
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* remove horizontal scroll on mobile */
+    background-color: lightsteelblue;
+}
+
+body>iframe {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+body>img {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 li {
     list-style: none;
@@ -31,10 +106,11 @@ li {
     flex-wrap: wrap;
 }
 
-    .two-column-list li {
-        width: 50%; /* Each item takes up half the width */
-        /*  list-style: none;*/
-    }
+.two-column-list li {
+    width: 50%;
+    /* Each item takes up half the width */
+    /*  list-style: none;*/
+}
 
 .split {
     flex: auto;
@@ -46,7 +122,8 @@ li {
     flex-direction: row;
 }
 
-.left, .right {
+.left,
+.right {
     flex: 1;
     display: flex;
     width: 50%;
@@ -63,7 +140,8 @@ li {
 
 
 .navbar {
-    background-color: var(--navbar-bg-color); /* Navbar background */
+    background-color: var(--navbar-bg-color);
+    /* Navbar background */
 }
 
 
@@ -82,17 +160,17 @@ li {
     width: 50%;
 }
 
-    .centerbox > h2 {
-        /*  flex: 1;*/
-        text-align: center;
-    }
+.centerbox>h2 {
+    /*  flex: 1;*/
+    text-align: center;
+}
 
-    .centerbox > i {
-        flex: 1;
-        align-content: flex-start;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.centerbox>i {
+    flex: 1;
+    align-content: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .buttonbox {
     display: flex;
@@ -105,14 +183,14 @@ li {
     gap: 5rem;
 }
 
-    .buttonbox .btn {
-        flex: 1;
-        background-color: indianred;
-        border: hidden;
-        width: fit-content;
-        align-self: center;
-        text-align: center;
-    }
+.buttonbox .btn {
+    flex: 1;
+    background-color: indianred;
+    border: hidden;
+    width: fit-content;
+    align-self: center;
+    text-align: center;
+}
 
 .navbar {
     display: block;
@@ -137,13 +215,14 @@ li {
     min-height: 75%;
     max-height: 100%;
     /*    padding-inline: 0.5vw;*/
-    max-width: 100%; /* viewport width */
+    max-width: 100%;
+    /* viewport width */
     flex-direction: column;
 }
 
 
 
-.timeline-table > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1) {
+.timeline-table>thead:nth-child(1)>tr:nth-child(1)>th:nth-child(1) {
     min-width: 25%;
 }
 
@@ -155,32 +234,32 @@ li {
     margin-right: auto;
 }
 
-    .timeline-table tr {
-        margin-top: 0px;
-        border-bottom: dotted;
-        border-color: azure;
-        border-width: 1px;
-    }
+.timeline-table tr {
+    margin-top: 0px;
+    border-bottom: dotted;
+    border-color: azure;
+    border-width: 1px;
+}
 
-    .timeline-table th {
-        padding: 5px;
-        border-block: 3px solid;
-        border-color: azure;
-        font-weight: bold;
-        text-align: center;
-    }
+.timeline-table th {
+    padding: 5px;
+    border-block: 3px solid;
+    border-color: azure;
+    font-weight: bold;
+    text-align: center;
+}
 
-    .timeline-table td {
-        padding: 5px;
-        text-align: center;
-        position: relative;
-    }
+.timeline-table td {
+    padding: 5px;
+    text-align: center;
+    position: relative;
+}
 
 .timeline-span {
     padding: 5px;
     margin: 1px;
     position: relative;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-title {
@@ -202,10 +281,10 @@ li {
     align-items: inherit;
 }
 
-    .top-container h2 {
-        left: auto;
-        right: auto;
-    }
+.top-container h2 {
+    left: auto;
+    right: auto;
+}
 
 .bi-telephone,
 .bi-pin-map,
@@ -245,13 +324,14 @@ li {
     max-width: fit-content;
 }
 
-    .socials-container i, img {
-        font-size: 2rem;
-        max-width: 100%;
-        max-height: 100%;
-        margin-left: 5vw;
-        margin-right: 5vw;
-    }
+.socials-container i,
+img {
+    font-size: 2rem;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
 
 .formbox {
     display: flex;
@@ -272,32 +352,32 @@ li {
     width: 25%;
 }
 
-    .form-group label {
-        min-width: 100px;
-        flex: 0 0 120px;
-        margin-left: 1%;
-        text-align: left;
-        margin-right: 10px;
-    }
+.form-group label {
+    min-width: 100px;
+    flex: 0 0 120px;
+    margin-left: 1%;
+    text-align: left;
+    margin-right: 10px;
+}
 
-    .form-group input {
-        flex: 1;
-        display: inline;
-        padding: 5px;
-        background: transparent;
-        text-align: left;
-        width: 500px;
-        border-style: unset;
-        pointer-events: none;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.form-group input {
+    flex: 1;
+    display: inline;
+    padding: 5px;
+    background: transparent;
+    text-align: left;
+    width: 500px;
+    border-style: unset;
+    pointer-events: none;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-        .form-group input::placeholder {
-            color: gray;
-            font-style: italic;
-            /* opacity: 0.5;*/
-        }
+.form-group input::placeholder {
+    color: gray;
+    font-style: italic;
+    /* opacity: 0.5;*/
+}
 
 
 .skill-container {
@@ -307,14 +387,14 @@ li {
     margin: 0px auto;
 }
 
-    .skill-container b {
-        font-size: 1.25rem;
-    }
+.skill-container b {
+    font-size: 1.25rem;
+}
 
-    .skill-container li {
-        margin-top: 1vh;
-        /*font-weight: bold;*/
-    }
+.skill-container li {
+    margin-top: 1vh;
+    /*font-weight: bold;*/
+}
 
 .skill-label {
     display: flex;

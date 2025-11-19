@@ -38,6 +38,12 @@ namespace ignc.dev.Controllers
             return View();
         }
 
+        [Route("test")]
+        public IActionResult Test()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         [Route("error")]
         public IActionResult Error()

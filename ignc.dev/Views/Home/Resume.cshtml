@@ -3,94 +3,202 @@
 }
 
 
-<div class="split">
-    <table class="timeline-table">
-        <thead>
-            <tr>
-                <th>Year</th>
-                <th>Project</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>2015-2020</td>
-                <td>
-                    <div class="timeline-title">AP College (Antwerp)</div>
-                    <div class="timeline-description">EM/EE: Automation</div>
-                </td>
-            </tr>
-            <tr>
-                <td>2020</td>
-                <td>
-                    <div class="timeline-title">Beta AGV project <br> Gebroeders DOMS</div>
-                    <div class="timeline-description">
-                        <a href="https://youtu.be/egqywqRfbAw?si=jppTnieZ1xpPrp9F">
-                            Python
-                            script for live SiCK 2D-laser plotting
-                        </a>
-                    </div>
-                    <div class="video-preview">
-                        <iframe width="224" height="126" title="youtube video" src="https://www.youtube.com/embed/egqywqRfbAw"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>2021-2022</td>
-                <td>
-                    <div class="timeline-title">Jr automation eng <br> Organon </div>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>OSISoft PI SCADA</li>
-                            <li>Authoring operator/process docs</li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
+    <div class="timeline-container">
+        <div class="timeline-header">
+            <h1>My IT Dev Journey</h1>
+            <p class="timeline-subtitle">From teen script kiddie to adult developer</p>
+        </div>
 
+        <div class="timeline">
+            <div class="timeline-item" data-year="2013">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content left">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>ArmA2 dev</h3>
+                            <span class="project-date">2013</span>
+                            
+                        </div>
+                        <div class="project-description">
+                            <p>Contributed <a href="https://community.bistudio.com/wiki/SQF_Syntax" target="_blank">SQF code</a> for the "takistan-life" ArmA2 gamefile and added server-side logic to identify trusted community members.</p>
+                            <p>Created server plugin to kick players connecting via VPN. These changes lead to a smaller game file for players to download and reduced exploitive behavior.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">SQF</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">WireShark</span>
+                                <span class="tech-tag">Windows server RDP</span>
+                            </div>
+                            <div class="project-impact">
+                                <strong>Learned:</strong> First time working with an international (USA based) team on a live project.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <tr>
-                <td>2022-2023</td>
-                <td>
-                    <div class="timeline-title">course .NET development (C#) <br> VDAB</div>
-                    <div class="timeline-description">
-                        <ul class="two-column-list">
-                            <li>OOP concepts</li>
-                            <li>ASP.NET Core</li>
-                            <li>Entity Framework</li>
-                            <li>SQL Server</li>
-                            <li>HTML & CSS</li>
-                            <li>JavaScript | Node.js</li>
-                            <li>Git</li>
-                            <li>SCRUM (webshop project with new team)</li>
-                        </ul>
+            <div class="timeline-item" data-year="2019">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content right">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3><a href="https://github.com/halftime/2019-sunparks-voucher-POC" target="_blank">Reported brute force risk in SunParks voucher</a></h3>
+                            <span class="project-date">2019</span>
+                        </div>
+                        <div class="project-description">
+                            <p>Discovered and reported a brute force vulnerability after stratching a SunParks voucher in 2019.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Http Requests</span>
+                            </div>
+                            <div class="project-evolution">
+                                <strong>Learned:</strong> The ethical side of hacking and responsible disclosure.
+                            </div>
+                        </div>
                     </div>
-                </td>
-            </tr>
+                </div>
+            </div>
 
-            <tr>
-                <td>2025-2030</td>
-                <td>
-                    <div class="timeline-title">
-                        (your_company_placeholder)
+            
+            <div class="timeline-item" data-year="2020">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content right">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>BA Thesis - Sick safety scanner 2D readout in Python</h3>
+                            <span class="project-date">2020</span>
+                        </div>
+                        <div class="project-description">
+                            <p>Live 2d plot from sick lidar safety scanner at <a href="https://doms.be/droid" target="_blank">gebr. Doms</a></p>
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/egqywqRfbAw?si=s3Pw13glZuNiLzG6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Wireshark</span>
+                            </div>
+                            <div class="project-evolution">
+                                <strong>Learned:</strong> To navigate protocol docs and reverse engineer real world data packets.
+                            </div>
+                        </div>
                     </div>
-                    <img src="./Media/lethimcook.png" style="object-fit: scale-down; max-height: 10vh;" alt="meme lethimcook.png" />
-                </td>
-            </tr>
-            <tr>
-                <td>2030</td>
-                <td>
-                    <div class="timeline-title" style="font-style: italic;">
-                        WhErE Do yOu sEe yOuRsElF In 5 yEaRs?
-                    </div>
-                    <div class="timeline-description">
-                        Right here, editing this description <i class="bi-emoji-grin"></i>
-                    </div>
-                </td>
-            </tr>
+                </div>
+            </div>
 
-        </tbody>
-    </table>
-</div>
+            <div class="timeline-item" data-year="2023">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content left">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>VDAB .NET course</h3>
+                            <span class="project-date">2023</span>
+                        </div>
+                        <div class="project-description">
+                            <p>Successfully completed .NET developer course at VDAB, finished with a mock SCRUM (webshop) project with other students.</p>
+                            <p>Started the course pre-chatGPT</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">ASP.NET core</span>
+                                <span class="tech-tag">Entity Framework</span>
+                                <span class="tech-tag">SQL server</span>
+                                <span class="tech-tag">Git</span>
+                            </div>
+                            <div class="project-evolution">
+                                <strong>Learned:</strong> To not rek the master git branch on a Friday
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-year="2025">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content left">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3><a href="https://github.com/halftime/game-js-2" target="_blank">StickArena attempt in node.js</a></h3>
+                            <span class="project-date">2025</span>
+                        </div>
+                        <div class="project-description">
+                            <p>Based on Stick Arena Ballistick from <a href="https://xgenstudios.com">XGen Studios</a> - Following some gamedev youtube tutorials. Learned core concepts as gameloop, events, sprites</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Node.js</span>
+                            </div>
+                            <div class="project-evolution">
+                                <strong>Learned:</strong> To use a <a href="https://github.com/collections/javascript-game-engines" target="_blank">JS game engine</a> next time!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-year="2025">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content left">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3><a href="https://github.com/halftime/price-web-api" target="_blank">Googlefinance() alternative</a></h3>
+                            <span class="project-date">2025</span>
+                        </div>
+                        <div class="project-description">
+                            <p>Financial pricing web API as a Googlefinance() alternative</p>
+                            <p><a href="https://docs.google.com/spreadsheets/d/1gQmmdZbtQsx1dtLFz7-i8w_4bGx3qFvNYnwueFmimN4/edit?usp=sharing" target="_blank">Live googlesheet example</a></p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Web API</span>
+                                <span class="tech-tag">ASP.NET core</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                            <div class="project-evolution">
+                                <strong>Learned:</strong> Deploying .NET Core web API via Dockerhub on Raspberry Pi.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="timeline-item" data-year="2025">
+                <div class="timeline-marker active"></div>
+                <div class="timeline-content right">
+                    <div class="project-card current">
+                        <div class="project-header">
+                            <h3>AMM</h3>
+                            <span class="project-date">2025</span>
+                        </div>
+                        <div class="project-description">
+                            <p>Coding an Automated Market Maker (AMM) for the <a href="https://docs.polymarket.com/developers/CLOB/introduction" target="_blank">polymarket CLOB API</a> 
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">web API</span>
+                            </div>
+                            <div class="project-evolution">
+                                <strong>Learned:</strong> To appreciate P2P markets
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="timeline-item" data-year="2026">
+                <div class="timeline-marker active"></div>
+                <div class="timeline-content right">
+                    <div class="project-card current">
+                        <div class="project-header">
+                            <h3>Ignc.dev</h3>
+                            <span class="project-date">2026 onwards</span>
+                        </div>
+                        <div class="project-description">
+                            <p>Growing Ignc.dev as personal brand. (Inspired by boot.dev)<p>
+                            <p>This site is hosted locally on a raspberry pi!</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">ASP.NET Core</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Raspbian/Linux</span>
+                                <span class="tech-tag">Cloudflare</span>
+                            </div>
+                            <div class="project-evolution">
+                                <strong>Learned:</strong> Be yourself. <b>Be bold.</b> Go bald, eventually.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

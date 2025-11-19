@@ -19,15 +19,16 @@ body {
     width: 84px;
     height: 28px;
     margin-top: 5px;
+    transform: scale(1.25);
     filter: brightness(0) invert(0);
     position: relative;
 }
 
-.socials-container .polymarket-logo:hover {
+/* .socials-container .polymarket-logo:hover {
     filter: brightness(0.8);
     transform: scale(1.05);
     transition: all 0.3s ease;
-}
+} */
 
 /* Tooltip for Polymarket logo */
 .socials-container a[href*="polymarket"] {
@@ -196,6 +197,7 @@ li {
     min-height: fit-content;
     align-items: baseline;
     padding-left: 2em;
+    background-color: whitesmoke;
 }
 
 
@@ -412,12 +414,15 @@ img {
 
 /* Historic Project Timeline Styles */
 .timeline-container {
-    max-width: 1200px;
+    max-width: 1400px;
+    width: 95vw;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .timeline-header {
@@ -525,28 +530,40 @@ img {
 }
 
 .timeline-content {
-    width: 45%;
-    padding: 0 2rem;
+    width: calc(45% - 2rem);
+    padding: 0 1rem;
+    min-width: 300px;
+    max-width: 450px;
+    box-sizing: border-box;
 }
 
 .timeline-content.left {
-    margin-left: 0;
+    margin-left: calc(5% - 1rem);
     text-align: right;
+    width: calc(45% - 2rem);
+    max-width: calc(45% - 2rem);
 }
 
 .timeline-content.right {
-    margin-left: 55%;
+    margin-left: calc(55% - 1rem);
     text-align: left;
+    width: calc(45% - 2rem);
+    max-width: calc(45% - 2rem);
 }
 
 .project-card {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 15px;
-    padding: 1rem;
+    padding: 1.5rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 .project-card::before {
@@ -610,10 +627,16 @@ img {
     to { box-shadow: 0 0 15px #11998e, 0 0 25px #11998e; }
 }
 
+.project-description {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 .project-description p {
     color: #555;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     font-size: 1.1rem;
 }
 
@@ -621,7 +644,8 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .tech-tag {
@@ -719,19 +743,40 @@ img {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .timeline::before {
-        left: 30px;
-    }
-    
-    .timeline-marker {
-        left: 30px;
+@media (max-width: 1024px) and (min-width: 769px) {
+    .timeline-container {
+        width: 98vw;
+        padding: 0.75rem;
     }
     
     .timeline-content {
-        width: calc(100% - 80px);
-        margin-left: 80px !important;
+        min-width: 250px;
+        max-width: 350px;
+        padding: 0 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-container {
+        width: 100vw;
+        padding: 0.25rem;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-marker {
+        left: 20px;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 50px);
+        margin-left: 50px !important;
         text-align: left !important;
+        min-width: unset;
+        max-width: unset;
+        padding: 0 0.25rem;
     }
     
     .timeline-header h1 {

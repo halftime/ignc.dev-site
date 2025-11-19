@@ -40,7 +40,7 @@ RUN mkdir -p /app/certs
 
 # Copy certificate directory from build context
 # This approach copies the entire certs directory structure
-COPY certs/ /app/certs
+COPY ignc.dev/certs/ /app/certs
 
 # Set appropriate permissions for certificate files
 RUN chmod 755 /app/certs && \

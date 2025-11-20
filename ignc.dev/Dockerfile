@@ -35,18 +35,18 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
-# Create directory for certificates
-RUN mkdir -p /app/certs
+# # Create directory for certificates
+# RUN mkdir -p /app/certs
 
-# Copy certificate directory from build context
-# This approach copies the entire certs directory structure
-COPY ignc.dev/certs/ /app/certs
+# # Copy certificate directory from build context
+# # This approach copies the entire certs directory structure
+# COPY ignc.dev/certs/ /app/certs
 
-# Set appropriate permissions for certificate files
-RUN chmod 755 /app/certs && \
-    find /app/certs -name "*.pem" -exec chmod 644 {} \; && \
-    find /app/certs -name "*.key" -exec chmod 600 {} \; && \
-    find /app/certs -name ".gitkeep" -exec chmod 644 {} \; && \
-    echo "Certificate directory prepared with proper permissions"
+# # Set appropriate permissions for certificate files
+# RUN chmod 755 /app/certs && \
+#     find /app/certs -name "*.pem" -exec chmod 644 {} \; && \
+#     find /app/certs -name "*.key" -exec chmod 600 {} \; && \
+#     find /app/certs -name ".gitkeep" -exec chmod 644 {} \; && \
+#     echo "Certificate directory prepared with proper permissions"
 
 ENTRYPOINT ["dotnet", "ignc.dev.dll"]

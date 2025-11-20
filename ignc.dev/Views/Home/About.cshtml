@@ -2,12 +2,13 @@
     ViewData["Title"] = "About me";
 }
 
-<div class="centerbox">
-    <h2>About me</h2>
-    <i class="bi-person-workspace" style="font-size: 2rem;"></i>
-</div>
+<div class="timeline-container">
+    <div class="timeline-header">
+        <h1>About me</h1>
+        <i class="bi-person-workspace" style="font-size: 2rem;"></i>
+    </div>
 
-<div class="split">
+    <div class="split">
 
     <div class="left">
         <div class="formbox">
@@ -40,97 +41,98 @@
             </div>
         </div>
 
-    </div>
-
-@* 
-    <div class="right">
-        <div class="skill-container">
-            <ul>
-                <li><b>Code</b></li>
-                <li>
-                    <div class="skill-label">C# dotnet</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="skill-label">EF core</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="skill-label">asp.net MVC</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="skill-label">asp.net web API</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="skill-label">Javascript</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%;"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="skill-label">Typescript</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 55%;"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="skill-label">SQL server</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%;"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="skill-label">Linux/shell (Raspbian)</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 60%;"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="skill-label">Html & CSS</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 65%;"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="skill-label">Git</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </li>
-                <li><b>Language</b></li>
-                <li>
-                    <div class="skill-label">Dutch</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 95%;"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="skill-label">English</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </li>
-                <li><b>Soft</b></li>
-                <li>
-                    <div class="skill-label">Agile development</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
-                </li>
-            </ul>
         </div>
-    </div> *@
 
+    @* 
+        <div class="right">
+            <div class="skill-container">
+                <ul>
+                    <li><b>Code</b></li>
+                    <li>
+                        <div class="skill-label">C# dotnet</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-label">EF core</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-label">asp.net MVC</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-label">asp.net web API</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-label">Javascript</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-label">Typescript</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 55%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-label">SQL server</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-label">Linux/shell (Raspbian)</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-label">Html & CSS</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 65%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-label">Git</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%;"></div>
+                        </div>
+                    </li>
+                    <li><b>Language</b></li>
+                    <li>
+                        <div class="skill-label">Dutch</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 95%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skill-label">English</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%;"></div>
+                        </div>
+                    </li>
+                    <li><b>Soft</b></li>
+                    <li>
+                        <div class="skill-label">Agile development</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div> *@
+
+    </div>
 </div>
 
 

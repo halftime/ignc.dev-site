@@ -539,7 +539,7 @@ img {
 
 .timeline-content.left {
     margin-left: calc(5% - 1rem);
-    text-align: right;
+    text-align: left;
     width: calc(45% - 2rem);
     max-width: calc(45% - 2rem);
 }

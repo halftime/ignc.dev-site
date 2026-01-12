@@ -2,8 +2,8 @@
 
 # network setup
 ```
-http----|CF rev proxy|---tcp:80----|local rpi tcp:8080|
-https---|CF rev proxy|---tcp:443---|local rpi tcp:8081|
+http----|CF rev proxy|---tcp:80----|local rpi tcp:4040|
+https---|CF rev proxy|---tcp:443---|local rpi tcp:4041|
 ```
 
 # run

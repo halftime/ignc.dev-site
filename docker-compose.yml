@@ -10,13 +10,13 @@ services:
     image: ignc-dev-site:latest
     container_name: ignc-dev-site
     ports:
-      - "80:8080"    # HTTP port
-      - "443:8081"   # HTTPS port
+      - "80:4040"    # HTTP port
+      - "443:4041"   # HTTPS port
     volumes:
       - ./certs:/home/admin/certs:ro  # Mount certificate directory as read-only
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
-      - ASPNETCORE_URLS=http://+:8080;https://+:8081
+      - ASPNETCORE_URLS=http://+:4040;https://+:4041
       - ASPNETCORE_Kestrel__Certificates__Default__Path=./certs/cloudflare-origin.pem
       - ASPNETCORE_Kestrel__Certificates__Default__KeyPath=./certs/cloudflare-origin.key
     restart: unless-stopped

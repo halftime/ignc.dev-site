@@ -8,5 +8,5 @@ https---|CF rev proxy|---tcp:443---|local rpi tcp:4041|
 
 # run
 ```
-sudo docker run -v /home/admin/certs:app/certs -p 443:8081 -d igncdev/site:arm64
+sudo docker run -v /home/admin/certs:/app/certs -p 443:8081 -d igncdev/site:arm64
 ```

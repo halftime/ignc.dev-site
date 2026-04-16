@@ -10,7 +10,7 @@ services:
     image: ignc-dev-site:latest
     container_name: ignc-dev-site
     ports:
-      - "80:4040"    # HTTP port
+      - "80:4040"    # HTTP port 
       - "443:4041"   # HTTPS port
     volumes:
       - ./certs:/home/admin/certs:ro  # Mount certificate directory as read-only

@@ -12,7 +12,7 @@ services:
       - "80:8080"    # HTTP port 
       - "443:8081"   # HTTPS port
     volumes:
-      - /home/pi/Certs:/app/certs  # Mount certificate directory as read-only
+      - /home/pi/Certs:/app/certs:ro  # Mount certificate directory as read-only
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:8080;https://+:8081
